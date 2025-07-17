@@ -57,7 +57,7 @@
                 <div class="welcome-wrapper">
                     <div class="welcome__content">
                         <div class="welcome__content-left">
-                            <h1 class="welcome__title">Welcome to the Louvre</h1>
+                            <h1 class="welcome__title">Welcome <br> to the Louvre</h1>
                             <p class="welcome__text">From the castle to the museum</p>
                             <a href="" class="welcome__btn">Discover the Louvre</a>
                         </div>
@@ -79,12 +79,24 @@
                                 </ul>
 
                                 <div class="slider__btns">
-                                    <button class="slider__btn btn-prev">
-                                        <img src="./img/svg/btn-prev.svg" alt="btn-prev">
-                                    </button>
-                                    <button class="slider__btn btn-next">
-                                        <img src="./img/svg/btn-next.svg" alt="btn-next">
-                                    </button>
+                                    <div role="button" class="slider__btn btn-prev">
+                                        <!-- <img src="./img/svg/btn-prev.svg" alt="btn-prev"> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="8" viewBox="0 0 74 8"
+                                            fill="none">
+                                            <path
+                                                d="M5.34104 8C3.64162 6.31339 1.86127 5.08262 0 4.30769V3.69231C1.86127 2.89459 3.64162 1.66382 5.34104 0H6.75723C5.94798 1.4359 5.1657 2.52991 4.4104 3.28205H28V4.71795H4.4104C5.1657 5.47009 5.94798 6.5641 6.75723 8H5.34104Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div role="button" class="slider__btn btn-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="8" viewBox="0 0 74 8"
+                                            fill="none">
+                                            <path
+                                                d="M68.659 -4.15048e-07C70.3584 1.68661 72.1387 2.91738 74 3.69231L74 4.30769C72.1387 5.10541 70.3584 6.33618 68.659 8L67.2428 8C68.052 6.5641 68.8343 5.47009 69.5896 4.71795L46 4.71795L46 3.28205L69.5896 3.28205C68.8343 2.52991 68.052 1.4359 67.2428 -5.25098e-07L68.659 -4.15048e-07Z"
+                                                fill="white" />
+
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -98,6 +110,9 @@
                 </div>
             </div>
         </section>
+        <!-- welcome end -->
+
+
     </main>
     <!--  main end-->
 </body>
