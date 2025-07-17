@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Museum</title>
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper">
-            <div class="header__wrapper">
+            <div class="header-wrapper">
                 <a class="header__logo" href="#">
                     <img src="./img/svg/logo.svg" alt="logo">
                     <span>Louvre</span>
@@ -46,7 +48,58 @@
             </div>
         </div>
     </header>
-
     <!-- header end -->
+
+    <!--  main start-->
+    <main>
+        <section class="welcome">
+            <div class="wrapper">
+                <div class="welcome-wrapper">
+                    <div class="welcome__content">
+                        <div class="welcome__content-left">
+                            <h1 class="welcome__title">Welcome to the Louvre</h1>
+                            <p class="welcome__text">From the castle to the museum</p>
+                            <a href="" class="welcome__btn">Discover the Louvre</a>
+                        </div>
+
+                        <div class="welcome__content-right">
+                            <div class="welcome__slider-control">
+                                <div class="slider-num">
+                                    <span>01</span>
+                                    <span>|</span>
+                                    <span>05</span>
+                                </div>
+
+                                <ul class="slider__rests">
+                                    <li class="slider__rest"></li>
+                                    <li class="slider__rest"></li>
+                                    <li class="slider__rest"></li>
+                                    <li class="slider__rest"></li>
+                                    <li class="slider__rest"></li>
+                                </ul>
+
+                                <div class="slider__btns">
+                                    <button class="slider__btn btn-prev">
+                                        <img src="./img/svg/btn-prev.svg" alt="btn-prev">
+                                    </button>
+                                    <button class="slider__btn btn-next">
+                                        <img src="./img/svg/btn-next.svg" alt="btn-next">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="welcome__slider">
+                        <ul class="slider__list">
+                            <li class="slider__item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--  main end-->
 </body>
+
 </html>
