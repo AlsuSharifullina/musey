@@ -113,7 +113,11 @@ a {
   text-decoration: none;
 }
 
-img {}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 .wrapper {
   max-width: 1920px;
@@ -373,3 +377,30 @@ img {}
 }
 
 /* welcome end*/
+
+/* Visiting start */
+.visiting {
+}
+.wrapper {
+}
+.visiting-wrapper {
+}
+.visiting__title {
+}
+.visiting__hr {
+}
+.visiting__cards {
+}
+.visiting__card {
+}
+.card__title {
+}
+.card__text {
+}
+.card__sub-text {
+}
+
+/* Visiting end */
+
+
+
