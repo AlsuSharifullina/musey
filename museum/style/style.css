@@ -774,3 +774,29 @@ img {
 .video__slider-btn-next {
 }
 /* video end */
+
+
+/* gallery start */
+.gallery {
+  background: var(--bg-dark);
+}
+.gallery__wrapper {
+  padding: 75px 0;
+}
+.gallery__title {
+  color: var(--white);
+font-family: var(--second-family);
+font-size: 80px;
+font-style: normal;
+font-weight: 400;
+line-height: 90px; /* 112.5% */
+letter-spacing: 5px;
+text-transform: uppercase;
+margin-bottom: 75px;
+}
+.gallery__container {
+}
+.gallery__img {
+}
+
+/* gallery end */
