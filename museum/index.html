@@ -483,11 +483,11 @@
         <section class="tickets" id="tickets">
             <div class="wrapper">
                 <div class="tickets-wrapper">
-                    <h2 class="tickets__title"></h2>
+                    <h2 class="tickets__title">BUY TICKETS</h2>
                     <hr class="tickets__hr">
                     <div class="tickets__content">
                         <div class="tickets__left">
-                            <img class="tickets__img" src="" alt="">
+                            <img class="tickets__img" src="./img/tickets.jpg" alt="tikets-img">
                         </div>
 
                         <div class="tickets__right">
@@ -496,7 +496,7 @@
                                     <h3 class="tickets__form-title">Ticket Type</h3>
 
                                     <div class="tickets__form-group">
-                                        <input type="radio" name="type-tikets" id="permanent">
+                                        <input type="radio" name="type-tikets" id="permanent" checked>
                                         <label for="permanent">Permanent exhibition</label>
                                     </div>
 
@@ -510,23 +510,25 @@
                                         <label for="combined">Combined Admission</label>
                                     </div>
                                 </div>
-                                <div class="tickets__form-left">
+                                <div class="tickets__form-right">
                                     <h3 class="tickets__form-title">Amount</h3>
+                                    <div class="form__ages">
                                     <label for="tickets-age">Basic 18+</label>
                                     <div class="tickets__age-container">
-                                        <button class="btn__age-minus">-</button>
-                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10">
+                                        <button class="btn__age-minus">&mdash;</button>
+                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10" value="1">
                                         <button class="btn__age-plus">+</button>
                                     </div>
 
                                     <label for="tickets-age">Senior 65+</label>
                                     <div class="tickets__age-container">
-                                        <button class="btn__age-minus">-</button>
-                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10">
+                                        <button class="btn__age-minus">&mdash;</button>
+                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10" value="1">
                                         <button class="btn__age-plus">+</button>
                                     </div>
+                                    </div>
 
-                                    <h3 class="tickets__form-title">Total € <span>220</span></h3>
+                                    <h3 class="tickets__form-title tickets__form-title-total">Total  €<span>220</span></h3>
 
                                     <button class="tickets__btn">Buy Now</button>
                                 </div>
@@ -535,9 +537,7 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
         <!-- Tickets end -->
 
 
