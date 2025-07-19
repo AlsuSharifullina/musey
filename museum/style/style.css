@@ -155,7 +155,7 @@ img {
   text-transform: uppercase;
 }
 
-.header__logo img {
+.header__logo svg{
   width: 49px;
   height: 26px;
   margin-right: 12px;
