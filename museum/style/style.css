@@ -583,7 +583,7 @@ img {
 /* video start */
 .video {}
 
-.video__wrapper {
+.video-wrapper {
   padding: 75px 0;
 }
 
@@ -793,7 +793,7 @@ img {
   height: 360px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
 }
-.gallery__wrapper {
+.gallery-wrapper {
   padding: 75px 0;
 }
 .gallery__title {
@@ -842,3 +842,8 @@ margin-bottom: 75px;
   transform: translateY(-70px);
 }
 /* gallery end */
+
+
+/* Tickets start */
+
+/* Tickets end */

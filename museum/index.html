@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- header start -->
     <header class="header">
         <div class="wrapper">
             <div class="header-wrapper">
@@ -52,6 +53,7 @@
 
     <!--  main start-->
     <main>
+        <!-- welcome start -->
         <section class="welcome">
             <div class="wrapper">
                 <div class="welcome-wrapper">
@@ -224,7 +226,7 @@
         <!-- video start -->
         <section class="video" id="video">
             <div class="wrapper">
-                <div class="video__wrapper">
+                <div class="video-wrapper">
                     <div class="video__content">
                         <h2 class="video__title">Video journey</h2>
                         <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy
@@ -422,13 +424,14 @@
 
                     <div class="video__slider-pagination">
                         <button class="video__slider-btn-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"
+                                fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z"
                                     fill="#999999" />
                             </svg>
                         </button>
-                    
+
                         <ul class="video__sleder-list">
                             <li class="video__slider-item"></li>
                             <li class="video__slider-item"></li>
@@ -437,22 +440,23 @@
                             <li class="video__slider-item"></li>
                         </ul>
                         <button class="video__slider-btn-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"
+                                fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M0.348163 0.219168C0.748196 -0.125842 1.33192 -0.0559202 1.65195 0.375342L5.82586 6.00004L1.65194 11.6247C1.33192 12.056 0.748195 12.1259 0.348162 11.7809C-0.0518709 11.4359 -0.116729 10.8066 0.203297 10.3753L3.45008 6.00004L0.203298 1.62473C-0.116728 1.19347 -0.05187 0.564177 0.348163 0.219168ZM4.5223 0.219168C4.92234 -0.125841 5.50606 -0.0559197 5.82609 0.375342L10 6.00004L5.82609 11.6247C5.50606 12.056 4.92234 12.1259 4.5223 11.7809C4.12227 11.4359 4.05741 10.8066 4.37744 10.3753L7.62422 6.00004L4.37744 1.62473C4.05741 1.19347 4.12227 0.564178 4.5223 0.219168Z"
                                     fill="#999999" />
                             </svg>
                         </button>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
         <!-- video end-->
 
         <!-- gallery start -->
-         <section class="gallery" id="gallery">
+        <section class="gallery" id="gallery">
             <div class="wrapper">
-                <div class="gallery__wrapper">
+                <div class="gallery-wrapper">
                     <h2 class="gallery__title">Art Gallery</h2>
 
                     <div class="gallery__container">
@@ -472,11 +476,69 @@
                 </div>
             </div>
 
-         </section>
-
-
+        </section>
         <!-- gallery start -->
 
+        <!-- Tickets start -->
+        <section class="tickets" id="tickets">
+            <div class="wrapper">
+                <div class="tickets-wrapper">
+                    <h2 class="tickets__title"></h2>
+                    <hr class="tickets__hr">
+                    <div class="tickets__content">
+                        <div class="tickets__left">
+                            <img class="tickets__img" src="" alt="">
+                        </div>
+
+                        <div class="tickets__right">
+                            <form class="tickets__form" action="#">
+                                <div class="tickets__form-left">
+                                    <h3 class="tickets__form-title">Ticket Type</h3>
+
+                                    <div class="tickets__form-group">
+                                        <input type="radio" name="type-tikets" id="permanent">
+                                        <label for="permanent">Permanent exhibition</label>
+                                    </div>
+
+                                    <div class="tickets__form-group">
+                                        <input type="radio" name="type-tikets" id="temporary">
+                                        <label for="temporary">Temporary exhibition</label>
+                                    </div>
+
+                                    <div class="tickets__form-group">
+                                        <input type="radio" name="type-tikets" id="combined">
+                                        <label for="combined">Combined Admission</label>
+                                    </div>
+                                </div>
+                                <div class="tickets__form-left">
+                                    <h3 class="tickets__form-title">Amount</h3>
+                                    <label for="tickets-age">Basic 18+</label>
+                                    <div class="tickets__age-container">
+                                        <button class="btn__age-minus">-</button>
+                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10">
+                                        <button class="btn__age-plus">+</button>
+                                    </div>
+
+                                    <label for="tickets-age">Senior 65+</label>
+                                    <div class="tickets__age-container">
+                                        <button class="btn__age-minus">-</button>
+                                        <input type="number" name="tickets-age" id="tickets-age" min="1" max="10">
+                                        <button class="btn__age-plus">+</button>
+                                    </div>
+
+                                    <h3 class="tickets__form-title">Total € <span>220</span></h3>
+
+                                    <button class="tickets__btn">Buy Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Tickets end -->
 
 
     </main>
