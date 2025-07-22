@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Museum</title>
@@ -65,65 +67,72 @@
     <!--  main start-->
     <main>
         <!-- welcome start -->
-        <section class="welcome">
-            <div class="wrapper">
-                <div class="welcome-wrapper">
-                    <div class="welcome__content">
-                        <div class="welcome__content-left">
-                            <h1 class="welcome__title">Welcome <br> to the Louvre</h1>
-                            <p class="welcome__text">From the castle to the museum</p>
-                            <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-                                class="welcome__btn">Discover the Louvre</a>
+ <section class="welcome">
+        <div class="wrapper">
+            <div class="welcome-wrapper">
+                <div class="welcome__content">
+                    <div class="welcome__content-left">
+                        <h1 class="welcome__title">Welcome <br> to the Louvre</h1>
+                        <p class="welcome__text">From the castle to the museum</p>
+                        <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
+                            class="welcome__btn">Discover the Louvre</a>
+                    </div>
+                    <div class="welcome__content-right">
+                        <div class="welcome__slider-control">
+                            <div class="custom-pagination-fraction"></div>
+                             <div class="swiper-pagination-bull-container">
+                            <div class="swiper-pagination-bull"></div>
+                            </div>
+
+                            <div class="gallery__btn-container">
+                            <button class="gallery__btn gallery__brn-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="8" viewBox="0 0 30 8"
+                                    fill="none">
+                                    <path
+                                        d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+
+                            <button class="gallery__btn gallery__brn-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="8" viewBox="0 0 30 8"
+                                    fill="none">
+                                    <path
+                                        d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                            </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="welcome__content-right">
-                            <div class="welcome__slider-control">
-                                <div class="slider-num">
-                                    <span>01</span>
-                                    <span>|</span>
-                                    <span>05</span>
+                <div class="welcome__slider ">
+                    <div class="slider-container">
+                        <div class="swiper-container mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/welcome-slider/1.jpg" alt="welcome-img">
                                 </div>
-
-                                <ul class="slider__rests">
-                                    <li class="slider__rest"></li>
-                                    <li class="slider__rest"></li>
-                                    <li class="slider__rest"></li>
-                                    <li class="slider__rest"></li>
-                                    <li class="slider__rest"></li>
-                                </ul>
-
-                                <div class="slider__btns">
-                                    <div role="button" class="slider__btn btn-prev">
-                                        <!-- <img src="./img/svg/btn-prev.svg" alt="btn-prev"> -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="8" viewBox="0 0 74 8"
-                                            fill="none">
-                                            <path
-                                                d="M5.34104 8C3.64162 6.31339 1.86127 5.08262 0 4.30769V3.69231C1.86127 2.89459 3.64162 1.66382 5.34104 0H6.75723C5.94798 1.4359 5.1657 2.52991 4.4104 3.28205H28V4.71795H4.4104C5.1657 5.47009 5.94798 6.5641 6.75723 8H5.34104Z"
-                                                fill="white" />
-                                        </svg>
-                                    </div>
-                                    <div role="button" class="slider__btn btn-next">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="8" viewBox="0 0 74 8"
-                                            fill="none">
-                                            <path
-                                                d="M68.659 -4.15048e-07C70.3584 1.68661 72.1387 2.91738 74 3.69231L74 4.30769C72.1387 5.10541 70.3584 6.33618 68.659 8L67.2428 8C68.052 6.5641 68.8343 5.47009 69.5896 4.71795L46 4.71795L46 3.28205L69.5896 3.28205C68.8343 2.52991 68.052 1.4359 67.2428 -5.25098e-07L68.659 -4.15048e-07Z"
-                                                fill="white" />
-
-                                        </svg>
-                                    </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/welcome-slider/2.jpg" alt="welcome-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/welcome-slider/3.jpg" alt="welcome-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/welcome-slider/4.jpg" alt="welcome-img">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/welcome-slider/5.jpg" alt="welcome-img">
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="welcome__slider">
-                        <ul class="slider__list">
-                            <li class="slider__item"></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
         <!-- welcome end -->
 
         <!-- Visiting start -->
@@ -212,9 +221,9 @@
                     <div class="explore__right">
                         <div class="explore___container">
                             <div class="explore__img-wrapper">
-                                <img src="./img/explore-slider/after.jpg" class="after-img">
+                                <img src="./img/explore-slider/after.jpg" class="after-img" alt="after-img">
                                 <div class="before-mask" id="mask">
-                                    <img src="./img/explore-slider/before.jpg" class="before-img">
+                                    <img src="./img/explore-slider/before.jpg" class="before-img" alt="before-img">
                                 </div>
                                 <div class="exsplore__slider" id="exsplore__slider">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="39" height="700" viewBox="0 0 39 700"
@@ -244,7 +253,7 @@
                             masterpieces such as Mona Lisa or Hammurabi's Code</p>
                     </div>
                     <div class="video__container">
-                        <video class="video__main" controls poster="./video/poster0.jpg" width="1440px">
+                        <video class="video__main" controls poster="./video/poster0.jpg" width="1440">
                             <source src="./video/video0.mp4" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
@@ -376,7 +385,7 @@
                                         <path d="M27 34.4348L45 24L27 13.5652V34.4348Z" fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_1_1868">
+                                        <clipPath >
                                             <rect width="68" height="48" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -400,7 +409,7 @@
                                         <path d="M27 34.4348L45 24L27 13.5652V34.4348Z" fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_1_1868">
+                                        <clipPath>
                                             <rect width="68" height="48" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -424,7 +433,7 @@
                                         <path d="M27 34.4348L45 24L27 13.5652V34.4348Z" fill="white" />
                                     </g>
                                     <defs>
-                                        <clipPath id="clip0_1_1868">
+                                        <clipPath>
                                             <rect width="68" height="48" fill="white" />
                                         </clipPath>
                                     </defs>
@@ -524,19 +533,18 @@
                                 <div class="tickets__form-right">
                                     <h3 class="tickets__form-title">Amount</h3>
                                     <div class="form__ages">
-                                        <label for="tickets-age">Basic 18+</label>
+                                        <label for="tickets-age-18">Basic 18+</label>
                                         <div class="tickets__age-container">
                                             <button class="btn__age-minus">&mdash;</button>
-                                            <input type="number" name="tickets-age" id="tickets-age" min="1" max="10"
+                                            <input type="number" name="tickets-age" id="tickets-age-18" min="1" max="10"
                                                 value="1">
                                             <button class="btn__age-plus">+</button>
                                         </div>
 
-                                        <label for="tickets-age">Senior 65+</label>
+                                        <label for="tickets-age-65">Senior 65+</label>
                                         <div class="tickets__age-container">
                                             <button class="btn__age-minus">&mdash;</button>
-                                            <input type="number" name="tickets-age" id="tickets-age" min="1" max="10"
-                                                value="1">
+                                            <input type="number" name="tickets-age" id="tickets-age-65" min="1" max="10" value="1">
                                             <button class="btn__age-plus">+</button>
                                         </div>
                                     </div>
@@ -555,7 +563,7 @@
         <!-- Tickets end -->
 
         <!-- parallax start -->
-        <section class="parallax"></section>
+        <div class="parallax"></div>
         <!-- parallax end -->
 
         <!-- Contacts start -->
@@ -687,6 +695,14 @@
         </div>
     </footer>
     <!-- footer end-->
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/main.js"></script>
+
+    <!-- script -->
 </body>
 
 </html>
