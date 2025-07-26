@@ -1454,6 +1454,44 @@ font-weight: 300;
 line-height: 60px;
 }
 /* welcom end */
+
+/* Visiting start */
+.visiting {
+  padding: 60px 0;
+}
+.visiting__title{
+  font-size: 50px;
+  line-height: 75px;
+  margin-bottom: 20px;
+}
+.visiting__hr{
+  margin-bottom: 60px;
+}
+.visiting__cards{
+  padding: 0 108px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 108px;
+}
+.card__title{
+  font-size: 28px;
+letter-spacing: 3px;
+}
+.visiting__card hr{
+  height: 2px;
+  width: 45%;
+}
+.card__text{
+  font-size: 20px;
+}
+.card__sub-text{
+  font-size: 16px;
+
+}
+.visiting__card img {
+  /* height: 215px;
+  object-fit: cover; */
+  margin-bottom: 22px;
+}
 }
 
 /* media 1024 start */
