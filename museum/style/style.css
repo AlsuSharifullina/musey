@@ -1654,6 +1654,25 @@ margin-bottom: 29px;
 .contacts__right img {
   height: 454px;
 }
+/* footer start */
+.footer-wrapper{
+  padding-top: 62px;
+}
+.footer__logo{
+   margin-right: 40px;
+}
+.footer__nav-list{
+  margin-right: 120px;
+}
+.footer__nav-list  .nav__item::after{
+  display: none;
+}
+.footer__nav-list  .nav__item .nav__link{
+  font-size: 22px;
+}
+.footer__hr {
+  margin-bottom: 50px;
+}
 }
 
 /* media 1024 start */
