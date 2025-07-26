@@ -1451,7 +1451,8 @@ line-height: 60px;
   padding: 60px 0;
 }
 .visiting__title,
-.explore__title{
+.explore__title,
+.tickets__title {
   font-size: 50px;
   line-height: 75px;
   margin-bottom: 20px;
@@ -1576,6 +1577,53 @@ height: 26px;
   font-size: 50px;
   line-height: 75px;
   margin-bottom: 60px;
+}
+/* Tickets start */
+.tickets-wrapper {
+  padding: 60px 0;
+}
+.tickets__hr{
+  margin-bottom: 60px;
+}
+.tickets__left {
+  width: 71%;
+  
+}
+.tickets__left img{
+  height: 440px;
+}
+.tickets__right {
+  width: fit-content;
+  padding-left: 80px;
+}
+
+.tickets__form-left{
+  display: none;
+}
+.tickets__form-right{
+  align-items: self-start;
+}
+.tickets__form-right h3 {
+  margin-bottom: 30px;
+}
+.tickets__age-container{
+  width: 175px;
+height: 50px;
+margin-bottom: 29px;
+
+}
+.tickets__form-right label{
+  margin-bottom: 10px;
+}
+.tickets__form-title-total{
+  margin-top: -5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.tickets__btn {
+  margin-top: 37px;
+  padding: 13px 38px;
 }
 }
 
