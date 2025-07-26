@@ -284,7 +284,7 @@ img {
 .welcome__slider-control {
   width: 100%;
   height: 120px;
-  background-color: var(--black);
+  background-color: var(--bg-dark);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1338,13 +1338,13 @@ img {
   will-change: transform;
 }
 .header__burger-btn span:nth-child(1){
-  transform: translateY(-6px);
+  transform: translateY(-9px);
 }
 .header__burger-btn span:nth-child(2){
 
 }
 .header__burger-btn span:nth-child(3){
-  transform: translateY(6px);
+  transform: translateY(9px);
 }
 /* крестик */
 .header.open .header__burger-btn span:nth-child(1){
@@ -1366,6 +1366,10 @@ img {
     padding: 0 20px;
   }
 
+  /* header start */
+  .header-wrapper {
+    height: 130px;
+  }
   .header__nav {
     position: absolute;
     left: -297px;
@@ -1411,7 +1415,7 @@ img {
     font-weight: 300;
   }
 
-  /* menu start*/
+  /* menu */
   .header__burger-btn{
     display: block;
   }
@@ -1419,8 +1423,37 @@ img {
     transform: translateX(100%);
     visibility: visible;
   }
+  /* header end*/
 
-  /* menu end*/
+  /* welcome_start */
+.welcome__content {
+  height: 585px;
+}
+.welcome__content-left {
+  width: 45%;
+}
+.welcome__content-right{
+  width: 59%;
+}
+.welcome__slider{
+  height: 79%;
+}
+.welcome__title {
+  font-size: 50px;
+  margin-top: 50px;
+}
+.welcome__text{
+font-size: 24px;
+margin-bottom: 50px;
+}
+.welcome__btn{
+  width: 300px;
+height: 60px;
+font-size: 20px;
+font-weight: 300;
+line-height: 60px;
+}
+/* welcom end */
 }
 
 /* media 1024 start */
