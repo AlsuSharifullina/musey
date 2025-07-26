@@ -1459,7 +1459,8 @@ line-height: 60px;
 .visiting {
   padding: 60px 0;
 }
-.visiting__title{
+.visiting__title,
+.explore__title{
   font-size: 50px;
   line-height: 75px;
   margin-bottom: 20px;
@@ -1491,6 +1492,30 @@ letter-spacing: 3px;
   /* height: 215px;
   object-fit: cover; */
   margin-bottom: 22px;
+}
+/* explore */
+.explore-wrapper{
+  padding: 60px 0;
+  flex-direction: column;
+}
+.explore__hr {
+  margin-bottom: 60px;
+}
+.explore__text{
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.explore__text:nth-of-type(3){
+  display: none;
+}
+.explore__left{
+  width: 100%;
+   padding-right: 0;
+   margin-bottom: 59px;
+}
+.explore__right{
+  width: 100%;
+  padding: 0 132px;
 }
 }
 
