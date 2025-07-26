@@ -1452,7 +1452,8 @@ line-height: 60px;
 }
 .visiting__title,
 .explore__title,
-.tickets__title {
+.tickets__title,
+.contacts__title{
   font-size: 50px;
   line-height: 75px;
   margin-bottom: 20px;
@@ -1624,6 +1625,34 @@ margin-bottom: 29px;
 .tickets__btn {
   margin-top: 37px;
   padding: 13px 38px;
+}
+/* Contacts start  */
+.contacts-wrapper {
+  padding: 60px 0;
+}
+.contacts__hr {
+  margin-bottom: 60px;
+}
+.contacts__left-title {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+.contacts__item{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.contacts__item a {
+  font-size: 20px;
+}
+.contacts__left {
+  width: 29%;
+}
+
+.contacts__right {
+  width: 71%;
+}
+.contacts__right img {
+  height: 454px;
 }
 }
 
