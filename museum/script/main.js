@@ -1,3 +1,29 @@
+// меню бургер
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('burger').addEventListener('click', function(){
+    event._isClickWithInMenu = true
+    document.querySelector('.header').classList.toggle('open')
+  })
+})
+
+document.getElementById('nav-menu').addEventListener('click', event =>{
+  event._isClickWithInMenu = true
+})
+
+document.getElementById('burger').addEventListener('click', event =>{
+  event._isClickWithInMenu = true
+})
+
+document.body.addEventListener('click', event =>{
+
+  if(event._isClickWithInMenu === true) return
+
+   document.querySelector('.header').classList.remove('open')
+
+})
+
+// меню все
+//слайдер начало 
 let swiper = new Swiper(".mySwiper", {
   navigation: {
      nextEl: ".gallery__brn-next",
@@ -25,7 +51,7 @@ function updateCustomPagination(swiper) {
   const current = swiper.activeIndex + 1; // Текущий слайд (начинается с 1)
   const total = swiper.slides.length;     // Всего слайдов
   
-  // Форматируем цифры (например, "01 — 05")
+  // Форматируем цифры
   const formattedCurrent = current.toString().padStart(2, '0');
   const formattedTotal = total.toString().padStart(2, '0');
   
