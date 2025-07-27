@@ -32,7 +32,13 @@
                     <span>Louvre</span>
                 </a>
 
-                <nav class="header__nav">
+                <button class="header__burger-btn" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="header__nav" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#visiting" class="nav__link">Visiting</a>
@@ -59,6 +65,8 @@
                         </li>
                     </ul>
                 </nav>
+
+
             </div>
         </div>
     </header>
@@ -112,19 +120,19 @@
                         <div class="swiper-container mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="./img/welcome-slider/1.jpg" alt="welcome-img">
+                                    <img src="./img/welcome-slider/1.jpg" alt="welcome-img" loading="lazy" >
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/welcome-slider/2.jpg" alt="welcome-img">
+                                    <img src="./img/welcome-slider/2.jpg" alt="welcome-img" loading="lazy" >
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/welcome-slider/3.jpg" alt="welcome-img">
+                                    <img src="./img/welcome-slider/3.jpg" alt="welcome-img" loading="lazy" >
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/welcome-slider/4.jpg" alt="welcome-img">
+                                    <img src="./img/welcome-slider/4.jpg" alt="welcome-img" loading="lazy" >
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/welcome-slider/5.jpg" alt="welcome-img">
+                                    <img src="./img/welcome-slider/5.jpg" alt="welcome-img" loading="lazy" >
                                 </div>
                             </div>
                         </div>
@@ -530,6 +538,7 @@
                                         <label for="combined">Combined Admission</label>
                                     </div>
                                 </div>
+                                
                                 <div class="tickets__form-right">
                                     <h3 class="tickets__form-title">Amount</h3>
                                     <div class="form__ages">
@@ -622,23 +631,22 @@
                         <li class="nav__item">
                             <a href="#visiting" class="nav__link">Visiting</a>
                         </li>
+                        <li class="nav__item">
+                            <a href="#gallery" class="nav__link">Gallery</a>
+                        </li>
 
                         <li class="nav__item">
                             <a href="#explore" class="nav__link">Explore</a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#video" class="nav__link">Video</a>
-                        </li>
-                    </ul>
-                    <ul class="footer__nav-list">
-                        <li class="nav__item">
-                            <a href="#gallery" class="nav__link">Gallery</a>
-                        </li>
-
-                        <li class="nav__item">
                             <a href="#tickets" class="nav__link">Tickets</a>
                         </li>
+                        <li class="nav__item">
+                            <a href="#video" class="nav__link">Video</a>
+                        </li>
+
+
 
                         <li class="nav__item">
                             <a href="#contacts" class="nav__link">Contacts</a>
@@ -700,7 +708,7 @@
     <!-- script -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./script/main.js"></script>
+    <script defer src="./script/main.js"></script>
 
     <!-- script -->
 </body>
