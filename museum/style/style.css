@@ -646,7 +646,7 @@ img {
   transform: translateX(-50%);
 }
 
-.exsplore__slider svg path {
+.exsplore__slider svg  {
   height: 100%;
 }
 
@@ -2177,5 +2177,155 @@ img {
     width: 29px;
     height: 16px;
     margin-right: 17px;
+  }
+   .header__nav{
+    padding: 15px 55px;
+    height: 60vh;
+   }
+    /* welcome */
+      .welcome__content {
+    height: 554px;
+
+  }
+      .welcome__title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-top: 5px;
+  }
+    .welcome__text {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+    .welcome__slider {
+    height: 300px;
+    margin-top: 179px;
+  }
+    .slider-container {
+    width: 100%;
+    height: 300px;
+  }
+    .welcome__slider-control {
+    padding: 0 50px;
+    gap: 25px;
+  }
+  .custom-pagination-fraction {
+    width: 50px;
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .slider__rests {
+    width: 75px;
+  }
+
+  .swiper-pagination-bull {
+    gap: 10px;
+  }
+
+  .swiper-pagination-bull .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+
+  .gallery__btn-container {
+    width: 55px;
+  }
+
+  .gallery__btn svg {
+    width: 20px;
+  }
+    /* Visiting start */
+    .visiting__title,
+  .explore__title,
+  .tickets__title,
+  .contacts__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .visiting__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0 50px 15px 50px;
+}
+  .card__title {
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+
+  .visiting__card hr {
+    height: 2px;
+    width: 55%;
+  }
+
+  .card__text {
+    font-size: 16px;
+  }
+  /* video start */
+  .video-wrapper {
+    padding: 36px 0;
+  }
+  .video__content {
+    margin-bottom: 20px;
+  }
+
+  .video__title {
+font-size: 28px;
+line-height: 40px; 
+  }
+    .video__main {
+    height: 222px;
+    
+  }
+.video__play-btn{
+  top: 40%;
+}
+  .video__play-btn svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video__control {
+    height: 50px;
+    padding: 16px 20px;
+  }
+  .video__control-play-btn svg{
+    width: 14px;
+  height: 18px;
+  }
+    .video__sound-btn svg {
+width: 18px;
+height: 14px;
+  }
+
+  .video__sound-container {
+    width: 200px;
+  }
+
+  .video__screen-btn svg {
+width: 18px;
+height: 18px;
+  }
+    .video__container {
+    margin-bottom: 40px;
+  }
+    .video__slider {
+    
+    margin-bottom: 33px;
+  }
+    .video__slider-container video {
+    width: 180px;
+  }
+    .video__slider-item {
+    width: 8px;
+    height: 8px;
+  }
+
+  .video__slider-pagination {
+    max-width: 174px;
+    padding-bottom: 40px;
+  }
+
+  .video__sleder-list {
+    width: 130px;
   }
 }
