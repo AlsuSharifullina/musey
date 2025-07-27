@@ -25,6 +25,7 @@ document.body.addEventListener('click', event =>{
 // меню все
 //слайдер начало 
 let swiper = new Swiper(".mySwiper", {
+  autoHeight: true,
   navigation: {
      nextEl: ".gallery__brn-next",
     prevEl: ".gallery__brn-prev",
