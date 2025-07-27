@@ -2322,10 +2322,68 @@ height: 18px;
 
   .video__slider-pagination {
     max-width: 174px;
-    padding-bottom: 40px;
+    padding-bottom: 5px;
   }
 
   .video__sleder-list {
     width: 130px;
+  }
+   /* gallery start */
+  .gallery {
+    max-height: 757px;
+    height: 100%;
+  }
+
+
+  .gallery__title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+    /* Tickets start */
+    .tickets__content {
+ flex-direction: column;
+}
+.tickets__left {
+  width: 100%;
+  margin-bottom: 35px;
+
+}
+  .tickets__left img {
+    height: 160px;
+  }
+.tickets__right {
+  width: 100%;
+  padding-left: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.tickets__form-right {
+  align-items: center;
+  margin: 0 auto;
+}
+  .tickets__form-right h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .form__ages label {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .form__ages{
+    margin-bottom: 0px;
+  }
+  .tickets__age-container{
+    margin-bottom: 20px;
+  }
+  .tickets__form-title-total{
+    font-size: 16px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+    .tickets__btn {
+      font-size: 16px;
+    margin-top: 20px;
+    padding: 16px 38px;
   }
 }
