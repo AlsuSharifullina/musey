@@ -654,6 +654,23 @@ img {
   height: 100%;
 }
 
+
+/* Стиль для активного состояния слайдера */
+.exsplore__slider.active {
+    opacity: 0.9;
+}
+
+/* Плавные переходы для маски и слайдера */
+.before-mask, .exsplore__slider {
+    transition: all 0.3s ease;
+}
+
+/* Запрещаем выделение текста при перетаскивании */
+.explore__img-wrapper {
+    user-select: none;
+}
+
+
 /* explore  end*/
 
 /* video start */

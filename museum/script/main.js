@@ -60,3 +60,86 @@ function updateCustomPagination(swiper) {
   document.querySelector('.custom-pagination-fraction').innerHTML = 
     `${formattedCurrent} | ${formattedTotal}`;
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Получаем необходимые элементы DOM
+    const slider = document.getElementById('exsplore__slider');
+    const mask = document.getElementById('mask');
+    const imgWrapper = document.querySelector('.explore__img-wrapper');
+    
+    // Флаг для отслеживания состояния перетаскивания
+    let isDragging = false;
+    
+    // Функция для обновления позиции слайдера и маски
+    function updateSliderPosition(clientX) {
+        const wrapperRect = imgWrapper.getBoundingClientRect();
+        const wrapperLeft = wrapperRect.left;
+        const wrapperWidth = wrapperRect.width;
+        
+        let newPosition = clientX - wrapperLeft;
+        
+
+        newPosition = Math.max(0, Math.min(newPosition, wrapperWidth));
+        
+
+        const percentage = (newPosition / wrapperWidth) * 100;
+        
+
+        mask.style.width = `${percentage}%`;
+        slider.style.left = `${percentage}%`;
+    }
+    
+
+    slider.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        slider.classList.add('active');
+        e.preventDefault(); 
+    });
+    
+    // Обработчик движения мыши
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        updateSliderPosition(e.clientX);
+    });
+    
+    // Обработчик окончания перетаскивания
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+        slider.classList.remove('active');
+    });
+    
+    // Обработчик выхода мыши за пределы документа
+    document.addEventListener('mouseleave', function() {
+        isDragging = false;
+        slider.classList.remove('active');
+    });
+    
+    // Сброс положения слайдера при обновлении страницы
+    function resetSlider() {
+        // Устанавливаем начальное положение (например, 50%)
+        const initialPosition = 50;
+        mask.style.width = `${initialPosition}%`;
+        slider.style.left = `${initialPosition}%`;
+    }
+    
+    resetSlider();
+    
+    // Дополнительно: обработка касаний для мобильных устройств
+    slider.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        slider.classList.add('active');
+        e.preventDefault();
+    });
+    
+    document.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        updateSliderPosition(e.touches[0].clientX);
+        e.preventDefault();
+    });
+    
+    document.addEventListener('touchend', function() {
+        isDragging = false;
+        slider.classList.remove('active');
+    });
+});
