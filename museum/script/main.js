@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const rect = el.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
     return (
-      rect.top <= viewportHeight * 0.75 && // Элемент в верхних 75% viewport
+      rect.top <= viewportHeight * 0.75 && 
       rect.bottom >= 0
     );
   }
@@ -170,14 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
           setTimeout(() => {
             img.style.opacity = '1';
             img.style.transform = 'translateY(0) scale(1)';
-          }, index * 50); // Уменьшил задержку для более плавного эффекта
+          }, index * 50); 
         }
       } else if (window.pageYOffset < gallerySection.offsetTop) {
         // Если мы выше секции галереи - сбрасываем анимацию
         img.style.opacity = '0';
         img.style.transform = 'translateY(50px) scale(0.9)';
       }
-      // Если мы ниже секции галереи - оставляем изображения видимыми
     });
   }
   
@@ -214,3 +213,137 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+// билеты рассчет главная
+document.addEventListener('DOMContentLoaded', function() {
+    // Цены билетов
+    const ticketPrices = {
+        permanent: { basic: 20, senior: 10 },
+        temporary: { basic: 25, senior: 12.5 },
+        combined: { basic: 40, senior: 20 }
+    };
+
+    // Элементы DOM
+    const basicInput = document.getElementById('tickets-age-18');
+    const seniorInput = document.getElementById('tickets-age-65');
+    const ticketTypeRadios = document.querySelectorAll('input[name="type-tikets"]');
+    const totalElement = document.querySelector('.tickets__form-title-total span');
+    const plusButtons = document.querySelectorAll('.btn__age-plus');
+    const minusButtons = document.querySelectorAll('.btn__age-minus');
+
+    // Загрузка сохраненных данных
+    function loadSavedData() {
+        const savedBasic = localStorage.getItem('ticketsBasic');
+        const savedSenior = localStorage.getItem('ticketsSenior');
+        const savedType = localStorage.getItem('ticketsType');
+
+        if (savedBasic !== null) basicInput.value = savedBasic;
+        if (savedSenior !== null) seniorInput.value = savedSenior;
+        if (savedType) {
+            document.getElementById(savedType).checked = true;
+        }
+    }
+
+    // Расчет общей стоимости
+    function calculateTotal() {
+        const basicCount = parseInt(basicInput.value) || 0;
+        const seniorCount = parseInt(seniorInput.value) || 0;
+        const selectedType = document.querySelector('input[name="type-tikets"]:checked').id;
+        
+        const basicPrice = ticketPrices[selectedType].basic;
+        const seniorPrice = ticketPrices[selectedType].senior;
+        
+        const total = (basicCount * basicPrice) + (seniorCount * seniorPrice);
+        totalElement.textContent = total.toFixed(2);
+    }
+
+    // Обработчики событий
+    function setupEventListeners() {
+        // Изменение количества билетов
+        basicInput.addEventListener('change', function() {
+            if (this.value < 0) this.value = 0;
+            if (this.value > 10) this.value = 10;
+            localStorage.setItem('ticketsBasic', this.value);
+            calculateTotal();
+        });
+
+        seniorInput.addEventListener('change', function() {
+            if (this.value < 0) this.value = 0;
+            if (this.value > 10) this.value = 10;
+            localStorage.setItem('ticketsSenior', this.value);
+            calculateTotal();
+        });
+
+        // Кнопки +/-
+        plusButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const input = this.parentElement.querySelector('input');
+                input.value = Math.min(parseInt(input.value || 0) + 1, 10);
+                localStorage.setItem(input.id === 'tickets-age-18' ? 'ticketsBasic' : 'ticketsSenior', input.value);
+                calculateTotal();
+            });
+        });
+
+        minusButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const input = this.parentElement.querySelector('input');
+                input.value = Math.max(parseInt(input.value || 0) - 1, 0);
+                localStorage.setItem(input.id === 'tickets-age-18' ? 'ticketsBasic' : 'ticketsSenior', input.value);
+                calculateTotal();
+            });
+        });
+
+        // Изменение типа билета
+        ticketTypeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                localStorage.setItem('ticketsType', this.id);
+                calculateTotal();
+            });
+        });
+    }
+
+    // Инициализация
+    loadSavedData();
+    setupEventListeners();
+    calculateTotal();
+});
+
+
+
+// карта
+  const map = L.map('map').setView([48.86091, 2.3364], 16);
+
+    // Добавляем тайлы OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Создаем кастомный маркер
+    const redMarker = L.divIcon({
+      className: 'custom-marker',
+      html: '<svg viewBox="0 0 24 24" fill="#A62B1F"><path d="M12 0C7.8 0 4 3.2 4 8c0 4 8 16 8 16s8-12 8-16c0-4.8-3.8-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>',
+      iconSize: [24, 24]
+    });
+
+    // Координаты маркеров
+    const markers = [
+      { lat: 48.86091, lng: 2.3364, title: "Главный вход" },
+      { lat: 48.8602, lng: 2.3333, title: "Вход Porte des Lions" },
+      { lat: 48.8607, lng: 2.3397, title: "Сад Карусель" },
+      { lat: 48.8619, lng: 2.3330, title: "Музей декоративного искусства" },
+      { lat: 48.8625, lng: 2.3365, title: "Пирамида" }
+    ];
+
+    // Добавляем маркеры на карту
+    markers.forEach(point => {
+      L.marker([point.lat, point.lng], {
+        icon: redMarker,
+        title: point.title
+      }).addTo(map);
+    });
+
+    // Добавляем кнопки масштабирования
+    L.control.zoom({ position: 'topright' }).addTo(map);

@@ -1218,7 +1218,27 @@ img {
   width: 100%;
   height: 620px;
 }
+.contacts__map {
+    width: 100%;
+    height: 620px;
+}
 
+/* Mapbox marker style */
+    #map {
+      width: 100%;
+      height: 620px;
+      background: #f0f0f0; /* Фон на время загрузки */
+    }
+    /* Кастомный маркер (красный как в макете) */
+    .custom-marker {
+      background: none;
+      border: none;
+    }
+    .custom-marker svg {
+      width: 24px;
+      height: 24px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
 /* Contacts end */
 
 
