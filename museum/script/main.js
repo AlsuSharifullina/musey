@@ -23,7 +23,7 @@ document.body.addEventListener('click', event =>{
 })
 
 // меню все
-//слайдер начало 
+//слайдер начало for welcome
 let swiper = new Swiper(".mySwiper", {
   autoHeight: true,
   navigation: {
@@ -61,7 +61,7 @@ function updateCustomPagination(swiper) {
     `${formattedCurrent} | ${formattedTotal}`;
 }
 
-
+// explore
 document.addEventListener('DOMContentLoaded', function() {
     // Получаем необходимые элементы DOM
     const slider = document.getElementById('exsplore__slider');
@@ -142,4 +142,75 @@ document.addEventListener('DOMContentLoaded', function() {
         isDragging = false;
         slider.classList.remove('active');
     });
+});
+
+
+
+// галлерея
+document.addEventListener('DOMContentLoaded', function() {
+  const gallerySection = document.querySelector('.gallery');
+  const galleryImages = document.querySelectorAll('.gallery__img');
+  
+  // Функция для проверки видимости элемента с небольшим отступом
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    return (
+      rect.top <= viewportHeight * 0.75 && // Элемент в верхних 75% viewport
+      rect.bottom >= 0
+    );
+  }
+  
+  // Функция для анимации изображений
+  function animateImages() {
+    galleryImages.forEach((img, index) => {
+      if (isElementInViewport(img)) {
+        // Если изображение видно - анимируем его
+        if (img.style.opacity !== '1') {
+          setTimeout(() => {
+            img.style.opacity = '1';
+            img.style.transform = 'translateY(0) scale(1)';
+          }, index * 50); // Уменьшил задержку для более плавного эффекта
+        }
+      } else if (window.pageYOffset < gallerySection.offsetTop) {
+        // Если мы выше секции галереи - сбрасываем анимацию
+        img.style.opacity = '0';
+        img.style.transform = 'translateY(50px) scale(0.9)';
+      }
+      // Если мы ниже секции галереи - оставляем изображения видимыми
+    });
+  }
+  
+  // Инициализация стилей для анимации
+  function initAnimationStyles() {
+    galleryImages.forEach(img => {
+      img.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+      img.style.opacity = '0';
+      img.style.transform = 'translateY(50px) scale(0.9)';
+      img.style.willChange = 'opacity, transform';
+    });
+  }
+  
+  // Проверка при загрузке страницы
+  function checkOnLoad() {
+    if (isElementInViewport(gallerySection)) {
+      animateImages();
+    }
+  }
+  
+  // Инициализация
+  initAnimationStyles();
+  checkOnLoad();
+  
+  // Оптимизированный обработчик события прокрутки
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        animateImages();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
 });
